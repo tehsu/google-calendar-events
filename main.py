@@ -53,6 +53,8 @@ def get_events(calendar):
                 cleaned_desc = soup.get_text(separator='\n')
             else:
                 cleaned_desc = "City of Knowledge"
+
+            return summary, cleaned_desc, start_time, end_time, most_recent_event, visibility
     except TimeoutError:
         print("The request timed out. Please try again later.")
         pass
